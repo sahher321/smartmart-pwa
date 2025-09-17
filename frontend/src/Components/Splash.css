@@ -1,0 +1,26 @@
+.main{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+
+.btnsplash
+{
+height: 50vh;
+width: 50%;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+
+}
+.logodiv
+{
+height: 40vh;
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: column;
+
+}

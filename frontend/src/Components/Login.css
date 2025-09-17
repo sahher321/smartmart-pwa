@@ -1,0 +1,43 @@
+.headingImg{
+ height: 20vh;
+ width: 80vw;
+ display: block;
+ margin: 0 auto;
+ margin-top: 10vh;
+ height: 5vh;
+
+}
+.headingImg2{
+ display: block;
+ margin: 0 auto;
+ margin-top: 2vh;
+}
+#form{
+ /* border: 1px solid black; */
+ /* height: 20vh; */
+ width: 80vw;
+ margin: 10vh auto;
+ padding: 20px;
+ box-sizing: border-box;
+}
+input{
+ display: block;
+ border-style: none;
+ border-bottom: 1px solid black;
+ width: 100%;
+ box-sizing: border-box;
+ margin: 10px 0px;
+}
+button{
+ display: block;
+ margin: auto;
+ background-color: #61B846;
+ color: white;
+ padding: 10px;
+ width: 100%;
+ border-radius: 20px;
+}
+#haveAccount{
+ text-align: center;
+ color: blue;
+}

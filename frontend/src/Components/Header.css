@@ -1,0 +1,12 @@
+.header
+{
+ height: 10vh;
+border-bottom: 1px solid black;
+ display: flex;
+ align-items: center;
+padding: 15px;
+}
+.name
+{
+ width: 70%;
+}
