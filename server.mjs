@@ -13,34 +13,31 @@ const mongodbURI =
 app.use(cors());
 app.use(express.json());
 
-
 const ProductSchema = new mongoose.Schema({
-  Name: String ,
- Des: String,
- unitName: String,
- price: Number,
- cate:String,
- createdOn: { type: Date, default: Date.now },
+  Name: String,
+  Des: String,
+  unitName: String,
+  price: Number,
+  cate: String,
+  createdOn: { type: Date, default: Date.now },
 });
 const ProductModal = mongoose.model("Product", ProductSchema);
 
 const LogSchema = new mongoose.Schema({
-  fullName:String,
+  fullName: String,
   Contact: Number,
-  Email:String,
-  Password: String ,
- createdOn: { type: Date, default: Date.now },
+  Email: String,
+  Password: String,
+  createdOn: { type: Date, default: Date.now },
 });
 const LogModal = mongoose.model("log", LogSchema);
 
-
 app.post("/signin", (req, res) => {
   var b = new LogModal({
-    fullName:req.body.fullName,
+    fullName: req.body.fullName,
     Contact: req.body.Contact,
     Email: req.body.Email,
-    Password:req.body.Password,
-
+    Password: req.body.Password,
   });
 
   b.save()
@@ -53,13 +50,7 @@ app.post("/signin", (req, res) => {
     });
 });
 
-
-
-
-
-
-
-
+//get all products api
 app.get("/products", (req, res) => {
   ProductModal.find({}, (err, data) => {
     if (!err) {
@@ -75,14 +66,14 @@ app.get("/products", (req, res) => {
   });
 });
 
+//Save product api
 app.post("/productData", (req, res) => {
   var a = new ProductModal({
-   Name:req.body.Name,
-   Des: req.body.Des,
-   unitName: req.body.unitName,
-   price:req.body. price,
-   cat:req.body.cat,
-
+    Name: req.body.Name,
+    Des: req.body.Des,
+    unitName: req.body.unitName,
+    price: req.body.price,
+    cat: req.body.cat,
   });
 
   a.save()
@@ -95,18 +86,15 @@ app.post("/productData", (req, res) => {
     });
 });
 
-
-
 const categorySchema = new mongoose.Schema({
-  Name:String,
+  Name: String,
   createdOn: { type: Date, default: Date.now },
 });
 const categoryModal = mongoose.model("categori", categorySchema);
 
-
 app.post("/categori", (req, res) => {
   var c = new categoryModal({
-    Name:req.body.Name,
+    Name: req.body.Name,
   });
 
   c.save()
@@ -118,7 +106,6 @@ app.post("/categori", (req, res) => {
       res.send(err);
     });
 });
-
 
 app.get("/getCategories", (req, res) => {
   categoryModal.find({}, (err, data) => {
@@ -135,10 +122,6 @@ app.get("/getCategories", (req, res) => {
   });
 });
 
-
-
-
-
 //app.get("/getAddress", (req, res) => {
 // ProductModal.find({}, (err, data) => {
 //    if (!err) {
@@ -153,7 +136,6 @@ app.get("/getCategories", (req, res) => {
 //    }
 //  });
 //});
-
 
 // Customer
 //
@@ -186,7 +168,6 @@ app.get("/getCategories", (req, res) => {
 //});
 //
 //
-
 
 //app.get("/customers", (req, res) => {
 //  customerModel.find({}, (err, data) => {

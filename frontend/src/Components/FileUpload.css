@@ -1,0 +1,24 @@
+ .upload-box {
+          width: 90vw;
+          height: 200px;
+          border: 2px dashed #aaa;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          text-align: center;
+          font-size: 16px;
+          color: #555;
+          transition: 0.3s;
+          margin: 15px;
+        }
+        .upload-box.dragging {
+          border-color: #007bff;
+          background: #f0f8ff;
+        }
+        .upload-box span {
+          color: #007bff;
+          text-decoration: underline;
+          cursor: pointer;
+        }
