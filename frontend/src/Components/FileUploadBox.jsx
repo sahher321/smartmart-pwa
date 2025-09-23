@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import './FileUpload.css';
-
+import "./FileUpload.css";
 
 export default function FileUploadBox() {
   const [isDragging, setIsDragging] = useState(false);
@@ -44,13 +43,10 @@ export default function FileUploadBox() {
       onDrop={handleDrop}
       onClick={handleBrowse}
       className={`upload-box ${isDragging ? "dragging" : ""}`}
-     
     >
       <p>
         Drag & drop your file here or <span>browse</span>
       </p>
-
-      
     </div>
   );
 }

@@ -34,29 +34,28 @@ function Adminitem() {
     return;
   };
 
-  
   const [options, setOptions] = useState([]);
 
-    useEffect(() => {
+  useEffect(() => {
     getAllCategories();
   }, []);
 
-const getAllCategories = async () => {
-  try {
-    const response = await axios.get(`http://localhost:5001/getCategories`);
-    console.log("response: ", response.data);
+  const getAllCategories = async () => {
+    try {
+      const response = await axios.get(`http://localhost:5001/getCategories`);
+      console.log("response: ", response.data);
 
-    // Map categories into { value, label }
-    const formattedOptions = response.data.data.map((cat) => ({
-      value: cat.Name,
-      label: cat.Name,
-    }));
+      // Map categories into { value, label }
+      const formattedOptions = response.data.data.map((cat) => ({
+        value: cat.Name,
+        label: cat.Name,
+      }));
 
-    setOptions(formattedOptions);
-  } catch (error) {
-    console.log("error in getting all categories", error);
-  }
-};
+      setOptions(formattedOptions);
+    } catch (error) {
+      console.log("error in getting all categories", error);
+    }
+  };
 
   const handleSelect = (value) => {
     alert("You selected: " + value);
@@ -95,33 +94,28 @@ const getAllCategories = async () => {
             setDes(e.target.value);
           }}
         />
-          <Input
-            type="text"
-            placeholder="Unit Name: eg. 500g, 1L, 1pc"
-            w={"90%"}
-            m={"5%"}
-            value={unitName}
-            onChange={(e) => {
-              setunitName(e.target.value);
-            }}
-          />
-    
-          <Input
-            type="text"
-            placeholder="Price"
-            w={"90%"}
-            m={"5%"}
-            value={price}
-            onChange={(e) => {
-              setprice(e.target.value);
-            }}
-          />
-        <Button
-          colorScheme="green"
-         w={"90%"}
-            m={"5%"}
-          onClick={getdata}
-        >
+        <Input
+          type="text"
+          placeholder="Unit Name: eg. 500g, 1L, 1pc"
+          w={"90%"}
+          m={"5%"}
+          value={unitName}
+          onChange={(e) => {
+            setunitName(e.target.value);
+          }}
+        />
+
+        <Input
+          type="text"
+          placeholder="Price"
+          w={"90%"}
+          m={"5%"}
+          value={price}
+          onChange={(e) => {
+            setprice(e.target.value);
+          }}
+        />
+        <Button colorScheme="green" w={"90%"} m={"5%"} onClick={getdata}>
           Add Product
         </Button>
       </div>

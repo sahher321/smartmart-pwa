@@ -44,7 +44,7 @@ function Adminsetting() {
     <div>
       <Header />
       <div className="adminmain">
-        <FileUploadBox/>
+        <FileUploadBox />
         <Input
           placeholder="New category name"
           type="text"
@@ -55,16 +55,11 @@ function Adminsetting() {
             setName(e.target.value);
           }}
         />
-        <Button
-          colorScheme="green"
-          w={"90%"}
-          m={"5%"}
-          onClick={AddCategory}
-        >
+        <Button colorScheme="green" w={"90%"} m={"5%"} onClick={AddCategory}>
           ADD
         </Button>
 
-        <Text m={"5%"}className="chakra-text css-19ccm4a">
+        <Text m={"5%"} className="chakra-text css-19ccm4a">
           ALL Categories
         </Text>
 
@@ -78,18 +73,25 @@ function Adminsetting() {
 />
       
       </div>*/}
-      <div style={{display:"flex", flexDirection:"row", alignItems:"center",padding:"5px"}}>
-        {products.map((eachProduct, i) => (
-          <div className="categoriesList" key={eachProduct._id}>
-            <Image
-              borderRadius="full"
-              boxSize="70px"
-              src="https://i.pinimg.com/236x/a1/7e/23/a17e23192907c8bfed8d6cb6923107e0.jpg"
-              alt="Dan Abramov"
-            />
-            {eachProduct.Name}
-          </div>
-        ))}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            padding: "5px",
+          }}
+        >
+          {products.map((eachProduct, i) => (
+            <div className="categoriesList" key={eachProduct._id}>
+              <Image
+                borderRadius="full"
+                boxSize="70px"
+                src="https://i.pinimg.com/236x/a1/7e/23/a17e23192907c8bfed8d6cb6923107e0.jpg"
+                alt="Dan Abramov"
+              />
+              {eachProduct.Name}
+            </div>
+          ))}
         </div>
       </div>
 
