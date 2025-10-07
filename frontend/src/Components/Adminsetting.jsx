@@ -5,9 +5,11 @@ import { Input, Button, Text, Image } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import FileUploadBox from "./FileUploadBox";
+
 function Adminsetting() {
   const [products, setProducts] = useState([]);
   const [loadProduct, setLoadProduct] = useState(false);
+
   useEffect(() => {
     getAllCategories();
   }, []);
@@ -24,11 +26,10 @@ function Adminsetting() {
   };
 
   let [Name, setName] = useState("");
+
   const AddCategory = async (event) => {
     event.preventDefault();
-
     alert(`Category Added Succesfully!`);
-
     try {
       await axios.post(`http://localhost:5001/categori`, {
         Name: Name,
@@ -36,7 +37,6 @@ function Adminsetting() {
     } catch (error) {
       console.log(error);
     }
-
     return;
   };
 
@@ -63,16 +63,6 @@ function Adminsetting() {
           ALL Categories
         </Text>
 
-        {/*<div className='products'>
-        <Image
-  borderRadius='full'
-  boxSize='70px'
-  src='https://i.pinimg.com/236x/a1/7e/23/a17e23192907c8bfed8d6cb6923107e0.jpg'
-  alt='Dan Abramov'
-  ml={5}
-/>
-      
-      </div>*/}
         <div
           style={{
             display: "flex",

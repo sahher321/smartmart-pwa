@@ -21,7 +21,7 @@ function Header() {
       </div>
       <div className="name">
         <Text color={"#024F9D"} fontWeight={"bold"}>
-          Mr.Ahmed
+          Mr.Raza
         </Text>
         <Text color={"green"} fontWeight={"bold"}>
           Admin
