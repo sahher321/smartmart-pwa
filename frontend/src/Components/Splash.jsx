@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 function Splash() {
   return (
     <div className="main">
+      
       <div className="logodiv">
         <Image mt={"5"} src={logo} alt="" className="logo" />
         <Image

@@ -80,9 +80,7 @@ function Adminitem() {
             setName(e.target.value);
           }}
         />
-
-        <SelectBox label="Category" options={options} onChange={handleSelect} />
-
+           <SelectBox label="Category" options={options} onChange={handleSelect} />
         <Textarea
           type="text"
           placeholder="Describe this item"
@@ -104,7 +102,6 @@ function Adminitem() {
             setunitName(e.target.value);
           }}
         />
-
         <Input
           type="text"
           placeholder="Price"
@@ -119,7 +116,6 @@ function Adminitem() {
           Add Product
         </Button>
       </div>
-
       <Footer />
     </div>
   );

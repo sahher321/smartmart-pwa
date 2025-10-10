@@ -18,7 +18,6 @@ function Signin() {
           alt=""
         />
       </div>
-
       <div className="form">
         <Input variant="flushed" placeholder="Email" h={70} />
         <Input variant="flushed" placeholder="Password" h={70} />
@@ -26,12 +25,12 @@ function Signin() {
           Forget Password?
         </Text>
       </div>
-      <Link to={"/dashboard"}>
+        <Link to={"/dashboard"}>
         {" "}
         <Button m={"10%"} h={50} w={"80%"} colorScheme="green">
           Log in{" "}
         </Button>
-      </Link>
+          </Link>
       <Link to={"/signup"}>
         {" "}
         <Button m={"10%"} h={50} w={"80%"} colorScheme="green">

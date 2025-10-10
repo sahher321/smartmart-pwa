@@ -4,15 +4,15 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer">
-      <Link to={"/dashboard"}>
+       <Link to={"/dashboard"}>
         <i className="fa-solid fa-house fa-2x"></i>
-      </Link>
-      <Link to={"/category"}>
+       </Link>
+       <Link to={"/category"}>
         <i className="fa-solid fa-plus fa-2x"></i>
-      </Link>
-      <Link to={"/setting"}>
+       </Link>
+       <Link to={"/setting"}>
         <i className="fa-solid fa-user fa-2x"></i>
-      </Link>
+       </Link>
     </div>
   );
 }

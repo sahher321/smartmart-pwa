@@ -5,9 +5,12 @@ import { Text, Image } from "@chakra-ui/react";
 import { useState } from "react";
 import axios from "axios";
 import Carousel from "./Carousel";
+
 function Adminhome() {
+
   const [products, setProducts] = useState([]);
   const [loadProduct, setLoadProduct] = useState(false);
+  
   useEffect(() => {
     const getAllProducts = async () => {
       try {
