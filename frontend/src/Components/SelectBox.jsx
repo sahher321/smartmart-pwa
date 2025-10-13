@@ -22,7 +22,7 @@ const SelectBox = ({ options, onChange }) => {
           borderRadius: "6px",
           border: "1px solid gray",
           margin: "0px 15px",
-          appearance: "none", // removes browser default arrow (optional)
+          appearance: "none", // removes default arrow
         }}
       >
         <option value="" disabled>
@@ -34,7 +34,7 @@ const SelectBox = ({ options, onChange }) => {
             value={opt.value}
             style={{
               width: "90vw", // makes option take full width of select
-              padding: "8px", // same padding as select
+              padding: "8px", // adds padding for better click area
             }}
           >
             {opt.label}

@@ -9,7 +9,6 @@ const Login = () => {
   let [Email, setEmail] = useState("");
   let [Password, setPassword] = useState("");
 
-  //console.log(Name,Des,unitName,price,cat);
   const sign = async (event) => {
     event.preventDefault();
 

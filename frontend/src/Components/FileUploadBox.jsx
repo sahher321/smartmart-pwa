@@ -19,7 +19,6 @@ export default function FileUploadBox() {
     const files = e.dataTransfer.files;
     if (files.length > 0) {
       alert(`You dropped ${files.length} file(s).`);
-      // 👉 handle file upload here
     }
   };
 
@@ -30,7 +29,6 @@ export default function FileUploadBox() {
       const files = e.target.files;
       if (files.length > 0) {
         alert(`You selected ${files.length} file(s).`);
-        // 👉 handle file upload here
       }
     };
     input.click();
