@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function Signin() {
   return (
+
     <div>
       <div className="upperlogo">
         <Image
@@ -38,6 +39,7 @@ function Signin() {
         </Button>
       </Link>
     </div>
+    
   );
 }
 

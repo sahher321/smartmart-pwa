@@ -7,6 +7,7 @@ import axios from "axios";
 import FileUploadBox from "./FileUploadBox";
 
 function Adminsetting() {
+
   const [products, setProducts] = useState([]);
   const [loadProduct, setLoadProduct] = useState(false);
 
@@ -15,6 +16,7 @@ function Adminsetting() {
   }, []);
 
   const getAllCategories = async () => {
+
     try {
       const response = await axios.get(`http://localhost:5001/getCategories`);
       console.log("response: ", response.data);
@@ -23,11 +25,13 @@ function Adminsetting() {
     } catch (error) {
       console.log("error in getting all categories", error);
     }
+
   };
 
   let [Name, setName] = useState("");
 
   const AddCategory = async (event) => {
+    
     event.preventDefault();
     alert(`Category Added Succesfully!`);
     try {

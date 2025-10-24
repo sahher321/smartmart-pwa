@@ -27,6 +27,7 @@ function Adminhome() {
   }, []);
 
   return (
+    
     <div>
       <Header />
       <Carousel />
@@ -60,6 +61,7 @@ function Adminhome() {
 
       <Footer />
     </div>
+
   );
 }
 
